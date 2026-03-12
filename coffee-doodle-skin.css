@@ -1,0 +1,652 @@
+/* ══════════════════════════════════════════════════════
+   ☕ COFFEE & PARCHMENT — AO3 Site Skin
+   a doodle-diary aesthetic for the cozy reader
+   ══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Special+Elite&display=swap');
+
+/* ── Base ──────────────────────────────────────────── */
+html, body {
+  background-color: #1a100a !important;
+  color: #e8cfa4 !important;
+  font-family: 'Lora', Georgia, serif !important;
+  font-size: 15px;
+}
+
+a,
+a:link,
+a:visited {
+  color: #c4956a;
+}
+
+a:hover {
+  color: #f2e2c8;
+}
+
+/* ── Outer Wrapper ─────────────────────────────────── */
+#outer.wrapper {
+  background-color: #1a100a;
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/outer.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+/* ── Inner Wrapper ─────────────────────────────────── */
+#inner.wrapper {
+  background-color: #222016;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 1.5em;
+  border-left: 2px dashed #7a5230;
+  border-right: 2px dashed #7a5230;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* ── Header ────────────────────────────────────────── */
+#header {
+  background-color: #1a100a;
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/stars.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #7a5230;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  padding-bottom: 4px;
+}
+
+#header .primary {
+  background: none;
+  box-shadow: none;
+}
+
+#header .primary li:first-child {
+  margin-left: 0;
+}
+
+/* ── Logo / Heading ────────────────────────────────── */
+#header h1 sup,
+#greeting .icon,
+#header .button,
+#header .landmark,
+#header .logo {
+  display: none;
+}
+
+#header .heading {
+  display: block;
+  width: 120px;
+  height: 70px;
+  margin: 12px 0 8px 16px;
+  border: 2px dashed #7a5230;
+  border-radius: 8px;
+  background-color: rgba(20, 10, 5, 0.5);
+}
+
+#header .heading a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0;
+  color: transparent;
+  padding: 0;
+}
+
+#header h1.heading a::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 60px;
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/coffee.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* ── Navigation Links ──────────────────────────────── */
+#header .menu li,
+#header .primary li a,
+#header .primary li a:visited,
+#header a,
+#header a:visited,
+#header .primary .open a,
+#header .primary .dropdown:hover a,
+#header .primary .dropdown a:focus,
+#dashboard a,
+#dashboard span {
+  color: #e8cfa4 !important;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+#header .actions a {
+  color: #e8cfa4;
+}
+
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header .menu,
+#small_login,
+.group.listbox,
+fieldset fieldset.listbox,
+form blockquote.userstuff,
+input:focus,
+textarea:focus,
+li.relationships a,
+.group.listbox .index,
+.dashboard fieldset fieldset.listbox .index,
+#dashboard a:hover,
+th,
+#dashboard .secondary,
+.secondary,
+.work.navigation .download,
+.javascript .work.navigation .download .secondary,
+.thread .even,
+.ui-datepicker tr:hover {
+  background: #2a2a2a;
+}
+
+/* ── Dropdown Menus ────────────────────────────────── */
+#header .dropdown .menu,
+#greeting .dropdown .menu {
+  background-color: #3d2010;
+  border: 2px dashed #7a5230;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+}
+
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
+.splash .favorite li:nth-of-type(odd) a,
+.ui-datepicker td:hover,
+#tos_prompt .heading,
+#tos_prompt [disabled] {
+  background: #2e1a0e;
+}
+
+#header #small_login {
+  background-color: rgba(30, 15, 5, 0.8);
+  border: 1px dashed #7a5230;
+  border-radius: 8px;
+}
+
+/* ── Greeting / User Block ─────────────────────────── */
+#greeting {
+  background: none;
+  color: #e8cfa4;
+  padding: 16px;
+  margin-right: 0;
+}
+
+#greeting li {
+  border-bottom: 1px dashed #7a5230;
+  margin-top: 0.3em;
+  font-family: 'Caveat', cursive;
+  font-size: 1.05em;
+}
+
+#greeting .current,
+#greeting .dropdown:hover li,
+#greeting .dropdown:focus li {
+  background: #2e1a0e;
+  color: #e8cfa4;
+  box-shadow: none;
+}
+
+#greeting .menu {
+  width: 16em;
+}
+
+/* ── Main Content ──────────────────────────────────── */
+#main,
+.work.own {
+  background: #222016;
+}
+
+/* ── Dashboard ─────────────────────────────────────── */
+#dashboard,
+#dashboard.own {
+  background: #2e1a0e;
+  color: #e8cfa4;
+  border: 2px dashed #7a5230;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+  font-family: 'Caveat', cursive;
+  font-size: 1.05em;
+}
+
+#dashboard ul {
+  background: transparent;
+  border: none;
+}
+
+/* ── Work Blurbs ───────────────────────────────────── */
+li.blurb,
+.listbox li.blurb,
+.statistics li,
+.statistics .listbox,
+.statistics .blurb {
+  background-color: #2e1a0e !important;
+  border: 2px solid #7a5230 !important;
+  border-radius: 12px !important;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.35) !important;
+  margin-bottom: 1.2em !important;
+  padding: 1em !important;
+}
+
+.blurb .header {
+  border-bottom: 1px dashed #7a5230;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ── Blurb Titles ──────────────────────────────────── */
+.blurb h4 a:link,
+.blurb h4 a:visited,
+a.work {
+  color: #c4956a !important;
+  font-family: 'Special Elite', serif !important;
+}
+
+/* ── Tags ──────────────────────────────────────────── */
+a.tag {
+  color: #e8cfa4 !important;
+  background-color: rgba(60, 30, 10, 0.5);
+  border: 1px dashed #7a5230;
+  border-radius: 20px;
+  padding: 1px 8px;
+  font-family: 'Caveat', cursive;
+  font-size: 0.95em;
+}
+
+a.tag:hover {
+  background-color: #6b3a1f;
+  color: #f2e2c8 !important;
+}
+
+/* ── Headings ──────────────────────────────────────── */
+h2 {
+  font-size: 1.286em;
+  line-height: 1;
+  margin: 0.5375em 0;
+}
+
+.heading,
+.group .heading,
+#outer .group .heading,
+fieldset.listbox .heading,
+.userstuff .heading,
+.userstuff h2 {
+  color: #e8cfa4 !important;
+  background: none;
+  text-shadow: none;
+  font-family: 'Special Elite', serif !important;
+}
+
+.system .latest h3,
+.splash .module h3,
+.system .tweets h3 {
+  color: #c4956a;
+}
+
+/* ── Work Skin ─────────────────────────────────────── */
+#workskin {
+  text-align: justify;
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.75;
+}
+
+#workskin h2 {
+  font-size: 2.7em;
+  color: #e8cfa4;
+}
+
+.workskin .notes,
+dl.meta,
+.reading h4.viewed,
+.bookmark .user,
+.comment .posted,
+.comment .edited {
+  font-size: 90%;
+}
+
+/* ── Listbox ───────────────────────────────────────── */
+.listbox,
+.listbox .index {
+  background: #222016;
+  border-color: #7a5230;
+}
+
+.listbox {
+  border: 2px dashed #7a5230;
+  border-radius: 10px;
+}
+
+/* ── Filters ───────────────────────────────────────── */
+.filters fieldset {
+  background-color: #2e1a0e;
+  border: 2px dashed #7a5230;
+  border-radius: 12px;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.filters .submit input {
+  color: #e8cfa4;
+  background: #6b3a1f;
+  border: 2px dashed #7a5230;
+  border-radius: 20px;
+  box-shadow: 0 0 4px #000;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1em;
+}
+
+#filters .rating,
+#filters .warning,
+#filters .category,
+.filters fieldset dl dt,
+.filters dt button,
+.filters dt {
+  color: #e8cfa4 !important;
+  font-family: 'Caveat', cursive;
+}
+
+/* ── Forms / Inputs ────────────────────────────────── */
+textarea,
+input,
+select,
+option,
+.toggled form,
+.dynamic form,
+.autocomplete .dropdown ul,
+.autocomplete .dropdown ul li,
+.autocomplete input {
+  background-color: #3d2010;
+  color: #e8cfa4;
+  border-color: #7a5230;
+}
+
+input,
+textarea,
+table {
+  background: #3d2010;
+  color: #e8cfa4;
+  border-color: #7a5230;
+  outline: none;
+  box-shadow: none;
+}
+
+form dt {
+  color: #e8cfa4;
+}
+
+/* ── Action Buttons ────────────────────────────────── */
+.actions a:active,
+.current,
+a.current,
+.current a:visited {
+  color: #e8cfa4;
+  background: #3d2010;
+  border-color: #7a5230;
+  box-shadow: inset 1px 1px 3px #333;
+}
+
+.announcement .action:hover,
+.announcement .action:focus {
+  color: #e8cfa4;
+  box-shadow: inset 2px 2px 2px #000;
+}
+
+/* ── Border Colors (shared) ────────────────────────── */
+li.comment,
+dl.meta,
+.bookmark .user,
+#header .menu li,
+#dashboard ul,
+#dashboard .secondary,
+ul.notes,
+.flash,
+.notice,
+tbody tr,
+thead td,
+#header #small_login,
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+form dt,
+.actions a:active,
+.current,
+a.current,
+.current a:visited,
+.search span.tip,
+.listbox,
+fieldset fieldset.listbox {
+  border-color: #7a5230;
+}
+
+/* ── Comment Backgrounds ───────────────────────────── */
+.comment h4.byline,
+#main .verbose legend,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+.verbose fieldset,
+.draft,
+form ul.notes,
+#modal,
+.ui-sortable li,
+.comment_notice,
+.kudos_notice,
+div.dynamic,
+#ui-datepicker-div,
+.ui-datepicker table {
+  background-color: #2e1a0e;
+  border-color: #7a5230;
+}
+
+/* ── Notices / Flash ───────────────────────────────── */
+.flash,
+.notice {
+  background-color: #2e1a0e;
+  border-color: #e8cfa4;
+  font-family: 'Caveat', cursive;
+  font-size: 1.05em;
+}
+
+form .notice,
+ul.notes,
+.caution {
+  background-color: #000;
+  border-color: #6b3a1f;
+}
+
+.alert.flash,
+.error,
+.comment_error,
+.kudos_error {
+  background: #efd1d1;
+  color: #e8cfa4;
+  border-color: #900;
+}
+
+/* ── Listbox / group / secondary ───────────────────── */
+.listbox,
+.bookmark .user,
+.bookmark .user .header,
+.reading h4.viewed,
+li.relationships a,
+.dropdown,
+fieldset fieldset.listbox,
+.dynamic form fieldset,
+.toggled form fieldset,
+.toggled form dl,
+.secondary .toggled form,
+.secondary form,
+.required .autocomplete {
+  background-color: #2e1a0e;
+}
+
+/* ── Icons ─────────────────────────────────────────── */
+.icon {
+  border: 2px solid #e8cfa4;
+}
+
+.comment div.icon {
+  border-bottom: none;
+}
+
+/* ── Bookmark Styles ───────────────────────────────── */
+.bookmark .user {
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.bookmark .user .module {
+  border: none;
+}
+
+.reading h4.viewed {
+  border: 1px dashed #e8cfa4;
+  box-shadow: none;
+}
+
+.bookmark .notes,
+.bookmark .userstuff,
+.bookmark .comment,
+.bookmark .meta {
+  color: #e8cfa4 !important;
+}
+
+.bookmark form,
+.bookmark form label,
+.bookmark form legend,
+.bookmark form dt,
+.bookmark form dd {
+  color: #e8cfa4 !important;
+}
+
+.bookmark input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+.bookmark textarea,
+.bookmark select {
+  color: #e8cfa4 !important;
+  background-color: #3d2010 !important;
+}
+
+/* ── Skin Editor ───────────────────────────────────── */
+#skin_css {
+  color: #e8cfa4 !important;
+  background-color: #1a100a !important;
+}
+
+/* ── Required / Tag Form Fields ────────────────────── */
+.required label,
+.required legend,
+.tags label,
+.tags legend,
+.tags dt,
+.tags dd,
+#work_rating,
+#work_archive_warnings,
+#work_fandom_string,
+.autocomplete,
+.autocomplete li,
+.autocomplete span {
+  color: #e8cfa4 !important;
+}
+
+#work_rating,
+#work_rating option,
+.required select,
+.required select option {
+  color: #e8cfa4 !important;
+  background-color: #2e1a0e !important;
+}
+
+/* ── Footer ────────────────────────────────────────── */
+#footer {
+  border: none;
+  background: none;
+  color: #9e7a5a;
+  font-family: 'Caveat', cursive;
+  font-size: 1em;
+  padding: 1.5em;
+}
+
+#footer h4 {
+  color: #9e7a5a !important;
+}
+
+/* ── Splash / News ─────────────────────────────────── */
+.splash .news li,
+.home .header h2 {
+  border-color: #7a5230;
+}
+
+/* ── Responsive: Tablet ────────────────────────────── */
+@media (max-width: 768px) {
+  #inner.wrapper {
+    margin: 0;
+    padding: 0 0.75em;
+    border-left: none;
+    border-right: none;
+  }
+
+  #outer.wrapper {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  #header .heading {
+    width: 90px;
+    height: 55px;
+    margin: 8px 0 6px 10px;
+  }
+
+  #header h1.heading a::after {
+    width: 70px;
+    height: 45px;
+  }
+
+  li.blurb,
+  .listbox li.blurb {
+    padding: 0.75em !important;
+    border-radius: 10px !important;
+  }
+
+  #workskin {
+    text-align: left;
+  }
+}
+
+/* ── Responsive: Mobile ────────────────────────────── */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  #header .heading {
+    width: 75px;
+    height: 48px;
+  }
+
+  #header h1.heading a::after {
+    width: 60px;
+    height: 38px;
+  }
+
+  #main {
+    padding: 1em 0.5em;
+  }
+}
