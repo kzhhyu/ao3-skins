@@ -36,8 +36,8 @@ a {
 
 #outer.wrapper {
   background: #1a100a;
-  padding-top: 140px;
-  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/outer.jpg");
+  padding-top: 100px;
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/pattern.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -57,7 +57,7 @@ a {
 
 #header {
   background-color: #1a100a;
-  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/stars.jpg");
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/mist.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center top;
