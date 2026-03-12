@@ -47,7 +47,7 @@ a {
 #header .heading {
   margin: 20px 0px 10px 20px;
   border: 2px solid #5c2a10;
-  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/mist.jpg");
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/stars.jpg");
   background-size: 100% auto;
   border-radius: 20px;
   width: 130px;
@@ -57,7 +57,7 @@ a {
 
 #header {
   background-color: #1a100a;
-  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/stars.jpg");
+  background-image: url("https://raw.githubusercontent.com/kzhhyu/ao3-images/main/mist.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center top;
